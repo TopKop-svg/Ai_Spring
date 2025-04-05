@@ -11,7 +11,9 @@ public class AiSpringApplication {
     public static void main(String[] args) {
         //ApplicationContext context = new GerGrovv
        // SpringApplication.run(AiSpringApplication.class, args);
-        ApplicationContext context = new ClassPathXmlApplicationContext("service.xml", "component.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        MessageService service = context.getBean(MessageService.class);
+        service.printMessage(context.getBean(MessageProvider.class));
     }
 
 }
