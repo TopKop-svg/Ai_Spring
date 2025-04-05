@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
         <bean id="messageProviderHell" class="org.example.ai_spring.HelloMessageProvider"/>
-        <bean id="messageProvider" class="org.example.ai_spring.GoodbyeMessageProvider"/>
+        <bean id="messageProviderBye" class="org.example.ai_spring.GoodbyeMessageProvider"/>
 
         <bean id="messageService" class="org.example.ai_spring.MessageService">
-            <constructor-arg ref="messageProvider"/>
+            <constructor-arg ref="messageProviderBye"/>
         </bean>
 
 </beans>
