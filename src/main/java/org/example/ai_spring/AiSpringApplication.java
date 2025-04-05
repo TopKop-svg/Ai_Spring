@@ -15,7 +15,7 @@ public class AiSpringApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MessageService service = context.getBean(MessageService.class);
         service.printMessage(context.getBean(MessageProvider.class));
-        System.out.println("Привет");
+        //System.out.println("Привет");
     }
 
 }
